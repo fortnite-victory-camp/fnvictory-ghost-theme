@@ -1,0 +1,19 @@
+{
+  "name": "fnvictorycamp-theme",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-coffee": "^0.11.1",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "dependencies": {
+    "grunt-cli": "^1.2.0"
+  },
+  "config": {
+    "posts_per_page": 25
+  },
+  "author": {
+    "email": "pvm@enchant.co"
+  }
+}

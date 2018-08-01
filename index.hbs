@@ -1,0 +1,29 @@
+{{!< default}}
+
+<header class="home-header">
+  <h1 class="home-title">Get yout first Victory Royale today!</h1>
+  <a href="https://discord.gg/axsVZE7" target="_blank" class="button button-header">Join the Discord</a>
+</header>
+
+<div class="container">
+  <main class="content">
+
+    <section class="blog" name="blog" id="blog">
+      <h3>Latest Guides</h3>
+      {{#foreach posts}}
+        <div class="post">
+          <h2 class="post-title">
+            <a href="{{url}}">
+              {{{title}}}
+            </a>
+          </h2>
+          <p class="post-excerpt">{{excerpt}}...</p>
+          <time class="post-date" datetime="{{date format='MMMM-YYYY'}}">
+            <a href="{{url}}">Updated {{date format="MMM. Do YYYY"}}</a>
+          </time>
+        </div>
+      {{/foreach}}
+    </section>
+
+  </main>
+</div>
