@@ -1,0 +1,54 @@
+/*  =======================
+    Post page
+=========================== */
+
+.post-nav {
+  position: fixed;
+  width: 100%;
+  display: block;
+  background-color: transparentize($color_violet, .04);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.nav-logo-link {
+  color: white;
+  text-align: center;
+  font-family: $primary_title_stack;
+  padding: 1em;
+  font-size: 2.8rem;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.post-template .post {
+  padding-top: 200px;
+  max-width: 700px;
+}
+
+.post-content {
+  padding: 0 4% 4em;
+  margin-bottom:4em;
+  border-bottom:2px solid #EFEFEF;
+
+  h2 {
+    font-size: 3.2rem;
+  }
+}
+
+.post-template .post-title {
+  font-size: 5.4rem;
+  color: $color_violet;
+  text-align: center;
+  padding: 0 4%;
+}
+
+.post-footer {
+  position: relative;
+  padding-bottom: 6em;
+}

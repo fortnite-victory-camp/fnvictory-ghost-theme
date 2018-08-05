@@ -1214,21 +1214,28 @@ img {
   text-align: center;
   max-width: 700px;
   text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1); }
+  @media (max-width: 30em) {
+    .home-title {
+      font-size: 6.4rem; } }
 
-.blog .post {
+.post-preview {
   margin-bottom: 4em; }
 
 @media (max-width: 30em) {
-  .post {
+  .blog {
     padding: 0 4%; } }
 
-.post-excerpt {
-  margin-bottom: 1em; }
+.post-preview-title {
+  font-size: 3.6rem; }
 
-.post-date {
+.post-preview-excerpt {
+  margin-bottom: 1em;
+  overflow-x: scroll; }
+
+.post-preview-date {
   font-weight: 500;
   font-size: 1.4rem; }
-  .post-date a {
+  .post-preview-date a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.3); }
 
@@ -1260,14 +1267,17 @@ img {
   max-width: 700px; }
 
 .post-content {
-  padding-bottom: 4em;
+  padding: 0 4% 4em;
   margin-bottom: 4em;
   border-bottom: 2px solid #EFEFEF; }
+  .post-content h2 {
+    font-size: 3.2rem; }
 
 .post-template .post-title {
   font-size: 5.4rem;
   color: #5142FF;
-  text-align: center; }
+  text-align: center;
+  padding: 0 4%; }
 
 .post-footer {
   position: relative;

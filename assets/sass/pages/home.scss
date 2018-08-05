@@ -1,0 +1,64 @@
+/*  =======================
+    Home page
+=========================== */
+
+.home-header {
+  background-color: #5142FF;
+  position: relative;
+  z-index:5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 4.2rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%),
+              linear-gradient(112.98deg, rgba(81, 66, 255, 0.5) 0%, rgba(81, 66, 255, 0) 100%),
+              url('https://cl.ly/350g3Y1j0I3I/home-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include mq-personal {
+    height: auto;
+  }
+}
+
+.home-title {
+  margin-top: .75em;
+  margin-bottom: .75em;
+  text-align: center;
+  max-width: 700px;
+  text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1);
+
+  @include mq-personal {
+    font-size: 6.4rem;
+  }
+}
+
+.post-preview {
+  margin-bottom: 4em;
+}
+
+.blog {
+  @include mq-personal {
+    padding: 0 4%;
+  }
+}
+
+.post-preview-title {
+  font-size: 3.6rem;
+}
+
+.post-preview-excerpt {
+  margin-bottom: 1em;
+  overflow-x: scroll;
+}
+
+.post-preview-date {
+  font-weight: 500;
+  font-size: 1.4rem;
+
+  a {
+    text-decoration: none;
+    color: rgba(0,0,0,.3);
+  }
+}
