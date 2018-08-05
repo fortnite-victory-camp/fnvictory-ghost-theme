@@ -1264,12 +1264,16 @@ img {
 
 .post-template .post {
   padding-top: 200px;
-  max-width: 700px; }
+  max-width: 700px;
+  width: 100%; }
 
 .post-content {
   padding: 0 4% 4em;
   margin-bottom: 4em;
   border-bottom: 2px solid #EFEFEF; }
+  .post-content code {
+    max-width: 100%;
+    overflow-x: scroll; }
   .post-content h2 {
     font-size: 3.2rem; }
 
