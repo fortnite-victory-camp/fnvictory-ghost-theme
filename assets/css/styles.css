@@ -1193,17 +1193,20 @@ img {
     Home page
 =========================== */
 .home-header {
-  background-color: #5142FF;
-  position: relative;
-  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  z-index: 5;
+  margin: 0 4%;
   padding-bottom: 4.2rem;
+  border-radius: 21px;
+  background-color: #5142FF;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(112.98deg, rgba(81, 66, 255, 0.5) 0%, rgba(81, 66, 255, 0) 100%), url("https://cl.ly/350g3Y1j0I3I/home-background.jpg");
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 2px 12px rgba(0, 0, 0, 0.4); }
   @media (max-width: 30em) {
     .home-header {
       height: auto; } }
@@ -1286,5 +1289,42 @@ img {
 .post-footer {
   position: relative;
   padding-bottom: 6em; }
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  padding-top: 3.4rem;
+  padding-bottom: 3.6rem;
+  padding-left: 4%;
+  padding-right: 4%; }
+  .top-nav .top-nav-logo {
+    display: flex;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background-color: transparent;
+    align-self: flex-start;
+    background-color: #222;
+    -webkit-mask: url("../images/FVC-Logomark.svg") no-repeat 50% 50%;
+    mask: url("../images/FVC-Logomark.svg") no-repeat 50% 50%;
+    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+    .top-nav .top-nav-logo:hover {
+      background-color: #5142FF;
+      transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  .top-nav .top-nav-links {
+    display: flex;
+    text-align: right;
+    align-self: flex-end;
+    margin-left: auto; }
+  .top-nav .top-nav-item {
+    list-style: none;
+    margin-left: 2em; }
+    .top-nav .top-nav-item a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold; }
+    .top-nav .top-nav-item a:hover {
+      color: #5142FF;
+      text-decoration: underline; }
 
 /*# sourceMappingURL=styles.css.map */
