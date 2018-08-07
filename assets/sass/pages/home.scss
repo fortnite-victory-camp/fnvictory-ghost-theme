@@ -2,35 +2,87 @@
     Home page
 =========================== */
 
-.home-header {
-  background-color: #5142FF;
-  position: relative;
-  z-index:5;
+.home-hero {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding-bottom: 4.2rem;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%),
-              linear-gradient(112.98deg, rgba(81, 66, 255, 0.5) 0%, rgba(81, 66, 255, 0) 100%),
-              url('https://cl.ly/350g3Y1j0I3I/home-background.jpg');
+  position: relative;
+  margin: 0 4% 8.8rem;
+  padding: 4.2rem;
+  border-radius: 21px;
+  background-color: #5142FF;
+  background:  linear-gradient(110.86deg, rgba(81, 66, 255, 0.96) 0%, rgba(81, 66, 255, 0.4) 100%),
+              url('../images/home-header-jubilation.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: 0 1px 3px rgba(0,0,0,.5), 0 2px 12px rgba(0,0,0,.4);
 
   @include mq-personal {
     height: auto;
+    background-position: center;
   }
 }
 
-.home-title {
-  margin-top: .75em;
-  margin-bottom: .75em;
-  text-align: center;
+.home-hero-title {
+  margin-bottom: 4rem;
   max-width: 700px;
   text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1);
 
   @include mq-personal {
-    font-size: 6.4rem;
+    font-size: 5.4rem;
+    text-align: center;
+  }
+}
+
+.home-hero-content {
+  color: white;
+  max-width: 558px;
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 3.6rem;
+
+  @include mq-personal {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+}
+
+.home-hero-button {
+  width: 100%;
+  max-width: 336px;
+  text-align: center;
+  margin-bottom: 0;
+
+  @include mq-personal {
+    font-size: 1.7rem;
+    padding: 1em 0;
+  }
+}
+
+.home-section-title {
+  font-size: 3.2rem;
+  color: #8b8b8b;
+  margin-bottom: 4.4rem;
+}
+
+.guides {
+  display: flex;
+  margin: 0 4%;
+
+  @include mq-personal {
+    flex-direction: column;
+  }
+}
+
+.top-guides {
+  flex: 2;
+  max-width: 625px;
+  margin-left: 3.2rem;
+  margin-right: 12rem;
+
+  @include mq-personal {
+    flex: 0;
+    margin: 0;
   }
 }
 
@@ -38,14 +90,14 @@
   margin-bottom: 4em;
 }
 
-.blog {
-  @include mq-personal {
-    padding: 0 4%;
-  }
-}
-
 .post-preview-title {
   font-size: 3.6rem;
+  font-family: $primary_title_stack;
+  text-transform: inherit;
+  margin-bottom: .25em;
+  margin-top: 0;
+
+  a { display: block; }
 }
 
 .post-preview-excerpt {
@@ -60,5 +112,179 @@
   a {
     text-decoration: none;
     color: rgba(0,0,0,.3);
+  }
+}
+
+.latest-guides {
+  flex: 1;
+  max-width: 320px;
+
+  @include mq-personal {
+    flex: 0;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+.latest-guide-item {
+  list-style: none;
+  margin-bottom: 1.5em;
+  line-height: 1.4;
+
+  a {
+    display: block;
+    color: #333;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: $color_violet;
+    text-decoration: none;
+  }
+}
+
+.see-more-link {
+  display: block;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 1em 0;
+}
+
+.join-discord {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-top: 10rem;
+  padding-bottom: 6.4rem;
+  margin-bottom: 8.8rem;
+  background-color: #5142FF;
+  background:  linear-gradient(110deg, rgba(81, 66, 255, 1) 0%, rgba(81, 66, 255, 0.5) 100%),
+              url('../images/home-discord.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.discord-content {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+
+  @include mq-personal {
+    padding: 0 4%;
+    max-width: 80%;
+  }
+}
+
+.discord-copy {
+  font-family: $primary_title_stack;
+  font-size: 6.4rem;
+  color: white;
+  max-width: 625px;
+  line-height: 1.2;
+  margin-bottom: .75em;
+
+  @include mq-personal {
+    font-size: 4.2rem;
+    line-height: 1.4;
+  }
+}
+
+.join-discord .button.button-white {
+  max-width: 300px;
+
+  @include mq-personal {
+    display: block;
+    max-width: 80%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.victory-team {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1020px;
+  padding-bottom: 8.8rem;
+  box-sizing: border-box;
+
+  @include mq-personal {
+    padding: 0 4%;
+  }
+}
+
+.profiles {
+  display: flex;
+  flex-direction: row;
+
+  @include mq-personal {
+    display: block;
+  }
+}
+
+.home-footer {
+  background-color: #333333;
+  color: white;
+  padding: 5.4rem 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  padding: 0 4%;
+
+  @include mq-personal {
+    display: block;
+    text-align: center;
+  }
+}
+
+.footer-half {
+  width: 50%;
+
+  @include mq-personal {
+    width: 100%;
+  }
+}
+
+.footer-title {
+  font-family: $primary_title_stack;
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 1em;
+}
+
+.footer-legal {
+  font-size: 1.2rem;
+  color: rgba(255,255,255, .7);
+  max-width: 350px;
+  line-height: 1.7;
+
+  @include mq-personal {
+    margin-bottom: 4.4rem;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+
+  @include mq-personal {
+    display: block;
+  }
+}
+
+.footer-links {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  a {
+    display: block;
+    font-size: 1.2rem;
+    color: rgba(255,255,255, .8);
+    padding: .3em 0;
   }
 }

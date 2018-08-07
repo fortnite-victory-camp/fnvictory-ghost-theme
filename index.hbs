@@ -1,29 +1,73 @@
 {{!< default}}
 
-<header class="home-header">
-  <h1 class="home-title">Get your first Victory Royale today!</h1>
-  <a href="https://discord.gg/axsVZE7" target="_blank" class="button button-header">Join the Discord</a>
+<header class="home-hero">
+  <h1 class="home-hero-title">Get your first Victory Royale today!</h1>
+  <p class="home-hero-content">
+    Play until you win with our top-notch coaching team.
+    You’ll learn great strategies & tactics to level up your skills,
+    while having a ton of fun.
+  </p>
+  <a href="https://calendly.com/fnvictorycamp/1hr-session" target="_blank" class="button button-white home-hero-button">Schedule a Victory Session</a>
 </header>
 
-<div class="container">
-  <main class="content">
-
-    <section class="blog" name="blog" id="blog">
-      <h3>Latest Guides</h3>
+<section class="guides">
+  <div class="top-guides">
+    <h2 class="home-section-title">Top Guides 🔥</h2>
+    {{#get "posts" filter="tags:playbook"}}
       {{#foreach posts}}
-        <div class="post-preview">
-          <h2 class="post-preview-title">
-            <a href="{{url}}">
-              {{{title}}}
-            </a>
-          </h2>
-          <p class="post-preview-excerpt">{{excerpt}}...</p>
-          <time class="post-preview-date" datetime="{{date format='MMMM-YYYY'}}">
-            <a href="{{url}}">Updated {{date format="MMM. Do YYYY"}}</a>
-          </time>
-        </div>
+        {{> "post-preview"}}
       {{/foreach}}
-    </section>
+    {{/get}}
+    <p class="hide-mobile">
+      <a href="/guides" class="see-more-link">See more &rarr;</a>
+    </p>
+  </div>
+  <ul class="latest-guides">
+    <h2 class="home-section-title">Latest Guides ✨</h2>
+    {{#foreach posts limit="7"}}
+      <li class="latest-guide-item">
+        <a href="{{url}}">
+          {{{title}}}
+        </a>
+      </li>
+    {{/foreach}}
+    <p>
+      <a href="/guides" class="see-more-link">See more &rarr;</a>
+    </p>
+  </ul>
+</section>
 
-  </main>
-</div>
+<section class="join-discord">
+  <div class="discord-content">
+    <p class="discord-copy">
+      Hop into the Victory Camp Discord to hang out with other people who love Fortnite.
+    </p>
+    <a href="http://discord.fortnitevictorycamp.com" class="button button-white">
+      Join us on Discord
+    </a>
+  </div>
+</section>
+
+<section class="victory-team">
+  <h2 class="home-section-title">The Victory Camp Team</h2>
+  <div class="profiles">
+    <div class="profile-card">
+      <img src="https://cl.ly/1t2E0x302z2w/team-clawshi.jpg" class="profile-image" />
+      <div class="profile-content">
+        <h4 class="profile-name">Coach Pat “Clawshi”</h4>
+        <p class="profile-location">Washington, DC</p>
+        <a class="profile-link" href="http://www.twitch.tv/clawshi" target="blank">Watch on Twitch</a>
+      </div>
+    </div>
+    <div class="profile-card">
+      <img src="https://cl.ly/2s0y431D0i1s/team-excelsan.jpg" class="profile-image" />
+      <div class="profile-content">
+        <h4 class="profile-name">Coach Paul “Excelsan</h4>
+        <p class="profile-location">San Francisco, CA</p>
+        <a class="profile-link" href="http://www.twitch.tv/excelsan" target="blank">Watch on Twitch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{> "footer" }}

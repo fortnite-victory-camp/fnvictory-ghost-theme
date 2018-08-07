@@ -1149,18 +1149,6 @@ img {
 .extra-pagination .pagination {
   width: auto; }
 
-.button {
-  display: block;
-  background-color: #FFCF24;
-  padding: .75em 3em;
-  color: #333;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-  margin-bottom: 1em; }
-  .button:hover {
-    color: #333; }
-
 /*  =======================
     Components
 =========================== */
@@ -1183,50 +1171,216 @@ img {
   max-width: 540px; }
   @media (max-width: 30em) {
     .content {
-      padding-top: 4rem; } }
+      padding: 4rem 4%; } }
   .content ul, .content ol {
     box-sizing: border-box; }
     .content ul li, .content ol li {
       margin-bottom: 1em; }
 
+@media (max-width: 30em) {
+  .hide-mobile {
+    display: none; } }
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  padding-top: 3.4rem;
+  padding-bottom: 3.6rem;
+  padding-left: 4%;
+  padding-right: 4%; }
+  .top-nav .top-nav-logo {
+    display: flex;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background-color: transparent;
+    align-self: flex-start;
+    background-color: #222;
+    -webkit-mask: url("../images/FVC-Logomark.svg") no-repeat 50% 50%;
+    mask: url("../images/FVC-Logomark.svg") no-repeat 50% 50%;
+    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+    @media (max-width: 30em) {
+      .top-nav .top-nav-logo {
+        width: 54px;
+        height: 54px;
+        -webkit-mask-size: 54px;
+        mask-size: 54px;
+        margin: 0 auto; } }
+    .top-nav .top-nav-logo:hover {
+      background-color: #5142FF;
+      transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  .top-nav .top-nav-links {
+    display: flex;
+    text-align: right;
+    align-self: flex-end;
+    margin-left: auto; }
+    @media (max-width: 30em) {
+      .top-nav .top-nav-links {
+        display: none; } }
+  .top-nav .top-nav-item {
+    list-style: none;
+    margin-left: 2em; }
+    .top-nav .top-nav-item a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold; }
+    .top-nav .top-nav-item a:hover {
+      color: #5142FF;
+      text-decoration: underline; }
+
+.button {
+  position: relative;
+  display: block;
+  margin-bottom: 1em;
+  padding: 1em;
+  color: #333;
+  background-color: #FFCF24;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  font-size: 1.8rem;
+  text-align: center;
+  transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  .button:hover {
+    transform: translateY(-2px);
+    color: #333;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5), 0px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  .button.button-white {
+    background-color: white;
+    color: #5142FF; }
+
+.profile-card {
+  position: relative;
+  width: 400px;
+  margin-right: 6rem;
+  transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  @media (max-width: 30em) {
+    .profile-card {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 4.4rem;
+      display: flex;
+      flex-direction: row; } }
+  .profile-card:hover {
+    transform: scale(1.02);
+    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  .profile-card .profile-image {
+    position: relative;
+    z-index: 2;
+    width: 132px;
+    height: 132px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4); }
+  .profile-card .profile-content {
+    position: absolute;
+    top: -2rem;
+    left: 6rem;
+    z-index: 1;
+    background-color: white;
+    padding: 2.4rem 3.6rem 2.4rem 9.4rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    max-width: 360px;
+    box-sizing: border-box; }
+    @media (max-width: 30em) {
+      .profile-card .profile-content {
+        position: relative;
+        left: -1rem;
+        top: 1.2rem;
+        width: 100%;
+        padding: 2.4rem; } }
+  .profile-card .profile-name {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 0; }
+  .profile-card .profile-location {
+    font-size: 1.8rem;
+    color: #999;
+    margin-bottom: .5em; }
+
 /*  =======================
     Home page
 =========================== */
-.home-header {
-  background-color: #5142FF;
-  position: relative;
-  z-index: 5;
+.home-hero {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding-bottom: 4.2rem;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(112.98deg, rgba(81, 66, 255, 0.5) 0%, rgba(81, 66, 255, 0) 100%), url("https://cl.ly/350g3Y1j0I3I/home-background.jpg");
+  position: relative;
+  margin: 0 4% 8.8rem;
+  padding: 4.2rem;
+  border-radius: 21px;
+  background-color: #5142FF;
+  background: linear-gradient(110.86deg, rgba(81, 66, 255, 0.96) 0%, rgba(81, 66, 255, 0.4) 100%), url("../images/home-header-jubilation.jpg");
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 2px 12px rgba(0, 0, 0, 0.4); }
   @media (max-width: 30em) {
-    .home-header {
-      height: auto; } }
+    .home-hero {
+      height: auto;
+      background-position: center; } }
 
-.home-title {
-  margin-top: .75em;
-  margin-bottom: .75em;
-  text-align: center;
+.home-hero-title {
+  margin-bottom: 4rem;
   max-width: 700px;
   text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1); }
   @media (max-width: 30em) {
-    .home-title {
-      font-size: 6.4rem; } }
+    .home-hero-title {
+      font-size: 5.4rem;
+      text-align: center; } }
+
+.home-hero-content {
+  color: white;
+  max-width: 558px;
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 3.6rem; }
+  @media (max-width: 30em) {
+    .home-hero-content {
+      font-size: 1.7rem;
+      text-align: center; } }
+
+.home-hero-button {
+  width: 100%;
+  max-width: 336px;
+  text-align: center;
+  margin-bottom: 0; }
+  @media (max-width: 30em) {
+    .home-hero-button {
+      font-size: 1.7rem;
+      padding: 1em 0; } }
+
+.home-section-title {
+  font-size: 3.2rem;
+  color: #8b8b8b;
+  margin-bottom: 4.4rem; }
+
+.guides {
+  display: flex;
+  margin: 0 4%; }
+  @media (max-width: 30em) {
+    .guides {
+      flex-direction: column; } }
+
+.top-guides {
+  flex: 2;
+  max-width: 625px;
+  margin-left: 3.2rem;
+  margin-right: 12rem; }
+  @media (max-width: 30em) {
+    .top-guides {
+      flex: 0;
+      margin: 0; } }
 
 .post-preview {
   margin-bottom: 4em; }
 
-@media (max-width: 30em) {
-  .blog {
-    padding: 0 4%; } }
-
 .post-preview-title {
-  font-size: 3.6rem; }
+  font-size: 3.6rem;
+  font-family: "Burbank", "Nunito Sans", "Helvetica Neue", "helvetica", sans-serif;
+  text-transform: inherit;
+  margin-bottom: .25em;
+  margin-top: 0; }
+  .post-preview-title a {
+    display: block; }
 
 .post-preview-excerpt {
   margin-bottom: 1em;
@@ -1238,6 +1392,147 @@ img {
   .post-preview-date a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.3); }
+
+.latest-guides {
+  flex: 1;
+  max-width: 320px; }
+  @media (max-width: 30em) {
+    .latest-guides {
+      flex: 0;
+      margin: 0;
+      max-width: 100%;
+      padding: 0; } }
+
+.latest-guide-item {
+  list-style: none;
+  margin-bottom: 1.5em;
+  line-height: 1.4; }
+  .latest-guide-item a {
+    display: block;
+    color: #333;
+    text-decoration: underline; }
+  .latest-guide-item a:hover {
+    color: #5142FF;
+    text-decoration: none; }
+
+.see-more-link {
+  display: block;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 1em 0; }
+
+.join-discord {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-top: 10rem;
+  padding-bottom: 6.4rem;
+  margin-bottom: 8.8rem;
+  background-color: #5142FF;
+  background: linear-gradient(110deg, #5142ff 0%, rgba(81, 66, 255, 0.5) 100%), url("../images/home-discord.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box; }
+
+.discord-content {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto; }
+  @media (max-width: 30em) {
+    .discord-content {
+      padding: 0 4%;
+      max-width: 80%; } }
+
+.discord-copy {
+  font-family: "Burbank", "Nunito Sans", "Helvetica Neue", "helvetica", sans-serif;
+  font-size: 6.4rem;
+  color: white;
+  max-width: 625px;
+  line-height: 1.2;
+  margin-bottom: .75em; }
+  @media (max-width: 30em) {
+    .discord-copy {
+      font-size: 4.2rem;
+      line-height: 1.4; } }
+
+.join-discord .button.button-white {
+  max-width: 300px; }
+  @media (max-width: 30em) {
+    .join-discord .button.button-white {
+      display: block;
+      max-width: 80%;
+      padding-left: 0;
+      padding-right: 0; } }
+
+.victory-team {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1020px;
+  padding-bottom: 8.8rem;
+  box-sizing: border-box; }
+  @media (max-width: 30em) {
+    .victory-team {
+      padding: 0 4%; } }
+
+.profiles {
+  display: flex;
+  flex-direction: row; }
+  @media (max-width: 30em) {
+    .profiles {
+      display: block; } }
+
+.home-footer {
+  background-color: #333333;
+  color: white;
+  padding: 5.4rem 0; }
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  padding: 0 4%; }
+  @media (max-width: 30em) {
+    .footer-content {
+      display: block;
+      text-align: center; } }
+
+.footer-half {
+  width: 50%; }
+  @media (max-width: 30em) {
+    .footer-half {
+      width: 100%; } }
+
+.footer-title {
+  font-family: "Burbank", "Nunito Sans", "Helvetica Neue", "helvetica", sans-serif;
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 1em; }
+
+.footer-legal {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 350px;
+  line-height: 1.7; }
+  @media (max-width: 30em) {
+    .footer-legal {
+      margin-bottom: 4.4rem; } }
+
+.footer-nav {
+  display: flex;
+  flex-direction: row; }
+  @media (max-width: 30em) {
+    .footer-nav {
+      display: block; } }
+
+.footer-links {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0; }
+  .footer-links a {
+    display: block;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    padding: .3em 0; }
 
 /*  =======================
     Post page
@@ -1263,7 +1558,7 @@ img {
     color: white; }
 
 .post-template .post {
-  padding-top: 200px;
+  padding-top: 3.2rem;
   max-width: 700px;
   width: 100%; }
 

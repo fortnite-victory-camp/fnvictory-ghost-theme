@@ -1,0 +1,56 @@
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  padding-top: 3.4rem;
+  padding-bottom: 3.6rem;
+  padding-left: 4%;
+  padding-right: 4%;
+
+  @include mq-personal {
+
+  }
+
+  .top-nav-logo {
+    display: flex;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background-color: transparent;
+    align-self: flex-start;
+    background-color: #222;
+    -webkit-mask:  url('../images/FVC-Logomark.svg') no-repeat 50% 50%;
+    mask: url('../images/FVC-Logomark.svg') no-repeat 50% 50%;
+    @include transition;
+
+    @include mq-personal {
+      width: 54px;
+      height: 54px;
+      -webkit-mask-size: 54px;
+      mask-size: 54px;
+      margin: 0 auto;
+    }
+
+    &:hover {
+      background-color: $color_violet;
+      @include transition;
+    }
+  }
+
+  .top-nav-links {
+    display: flex;
+    text-align: right;
+    align-self: flex-end;
+    margin-left: auto;
+    @include mq-personal {
+      display: none;
+    }
+  }
+
+  .top-nav-item {
+    list-style: none;
+    margin-left: 2em;
+    a { color: #333; text-decoration: none; font-weight: bold; }
+    a:hover { color: $color_violet; text-decoration: underline; }
+  }
+
+}

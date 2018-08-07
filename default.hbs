@@ -16,7 +16,9 @@
   {{ ghost_head }}
   <link rel="shortcut icon" href="http://www.paulmederos.com/favicon.png" type="image/x-icon">
 </head>
-<body class="{{body_class}}">
+<body class="{{body_class}} fnv">
+  {{> "top-nav"}}
+
   {{{ body }}}
 
   {{ ghost_foot }}

@@ -1,0 +1,13 @@
+{{!< default}}
+
+<div class="container">
+  <section class="all-guides-list content">
+    {{#get "posts" limit="all"}}
+      {{#foreach posts}}
+        {{> "post-preview"}}
+      {{/foreach}}
+    {{/get}}
+  </section>
+</div>
+
+{{> "footer" }}
