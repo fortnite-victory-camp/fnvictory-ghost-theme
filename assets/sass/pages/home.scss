@@ -2,38 +2,61 @@
     Home page
 =========================== */
 
-.home-header {
+.home-hero {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   position: relative;
   z-index:5;
   margin: 0 4%;
-  padding-bottom: 4.2rem;
+  padding: 4.2rem;
   border-radius: 21px;
   background-color: #5142FF;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%),
-              linear-gradient(112.98deg, rgba(81, 66, 255, 0.5) 0%, rgba(81, 66, 255, 0) 100%),
-              url('https://cl.ly/350g3Y1j0I3I/home-background.jpg');
+  background:  linear-gradient(110.86deg, rgba(81, 66, 255, 0.96) 0%, rgba(81, 66, 255, 0.4) 100%),
+              url('../images/home-header-jubilation.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 0 1px 3px rgba(0,0,0,.5), 0 2px 12px rgba(0,0,0,.4);
 
   @include mq-personal {
     height: auto;
+    background-position: center;
   }
 }
 
-.home-title {
-  margin-top: .75em;
-  margin-bottom: .75em;
-  text-align: center;
+.home-hero-title {
+  margin-bottom: 4rem;
   max-width: 700px;
   text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1);
 
   @include mq-personal {
-    font-size: 6.4rem;
+    font-size: 5.4rem;
+    text-align: center;
+  }
+}
+
+.home-hero-content {
+  color: white;
+  max-width: 558px;
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 3.6rem;
+
+  @include mq-personal {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+}
+
+.home-hero-button {
+  width: 100%;
+  max-width: 336px;
+  text-align: center;
+  margin-bottom: 0;
+
+  @include mq-personal {
+    font-size: 1.7rem;
+    padding: 1em 0;
   }
 }
 

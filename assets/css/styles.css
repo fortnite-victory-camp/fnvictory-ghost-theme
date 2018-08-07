@@ -1149,18 +1149,6 @@ img {
 .extra-pagination .pagination {
   width: auto; }
 
-.button {
-  display: block;
-  background-color: #FFCF24;
-  padding: .75em 3em;
-  color: #333;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-  margin-bottom: 1em; }
-  .button:hover {
-    color: #333; }
-
 /*  =======================
     Components
 =========================== */
@@ -1189,37 +1177,125 @@ img {
     .content ul li, .content ol li {
       margin-bottom: 1em; }
 
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  padding-top: 3.4rem;
+  padding-bottom: 3.6rem;
+  padding-left: 4%;
+  padding-right: 4%; }
+  .top-nav .top-nav-logo {
+    display: flex;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background-color: transparent;
+    align-self: flex-start;
+    background-color: #222;
+    -webkit-mask: url("../images/FVC-Logomark.svg") no-repeat 50% 50%;
+    mask: url("../images/FVC-Logomark.svg") no-repeat 50% 50%;
+    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+    @media (max-width: 30em) {
+      .top-nav .top-nav-logo {
+        width: 54px;
+        height: 54px;
+        -webkit-mask-size: 54px;
+        mask-size: 54px;
+        margin: 0 auto; } }
+    .top-nav .top-nav-logo:hover {
+      background-color: #5142FF;
+      transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  .top-nav .top-nav-links {
+    display: flex;
+    text-align: right;
+    align-self: flex-end;
+    margin-left: auto; }
+    @media (max-width: 30em) {
+      .top-nav .top-nav-links {
+        display: none; } }
+  .top-nav .top-nav-item {
+    list-style: none;
+    margin-left: 2em; }
+    .top-nav .top-nav-item a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold; }
+    .top-nav .top-nav-item a:hover {
+      color: #5142FF;
+      text-decoration: underline; }
+
+.button {
+  position: relative;
+  display: block;
+  margin-bottom: 1em;
+  padding: 1em;
+  color: #333;
+  background-color: #FFCF24;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  font-size: 1.8rem;
+  transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  .button:hover {
+    transform: translateY(-2px);
+    color: #333;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5), 0px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  .button.button-white {
+    background-color: white;
+    color: #5142FF; }
+
 /*  =======================
     Home page
 =========================== */
-.home-header {
+.home-hero {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   position: relative;
   z-index: 5;
   margin: 0 4%;
-  padding-bottom: 4.2rem;
+  padding: 4.2rem;
   border-radius: 21px;
   background-color: #5142FF;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(112.98deg, rgba(81, 66, 255, 0.5) 0%, rgba(81, 66, 255, 0) 100%), url("https://cl.ly/350g3Y1j0I3I/home-background.jpg");
+  background: linear-gradient(110.86deg, rgba(81, 66, 255, 0.96) 0%, rgba(81, 66, 255, 0.4) 100%), url("../images/home-header-jubilation.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 2px 12px rgba(0, 0, 0, 0.4); }
   @media (max-width: 30em) {
-    .home-header {
-      height: auto; } }
+    .home-hero {
+      height: auto;
+      background-position: center; } }
 
-.home-title {
-  margin-top: .75em;
-  margin-bottom: .75em;
-  text-align: center;
+.home-hero-title {
+  margin-bottom: 4rem;
   max-width: 700px;
   text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1); }
   @media (max-width: 30em) {
-    .home-title {
-      font-size: 6.4rem; } }
+    .home-hero-title {
+      font-size: 5.4rem;
+      text-align: center; } }
+
+.home-hero-content {
+  color: white;
+  max-width: 558px;
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 3.6rem; }
+  @media (max-width: 30em) {
+    .home-hero-content {
+      font-size: 1.7rem;
+      text-align: center; } }
+
+.home-hero-button {
+  width: 100%;
+  max-width: 336px;
+  text-align: center;
+  margin-bottom: 0; }
+  @media (max-width: 30em) {
+    .home-hero-button {
+      font-size: 1.7rem;
+      padding: 1em 0; } }
 
 .post-preview {
   margin-bottom: 4em; }
@@ -1289,42 +1365,5 @@ img {
 .post-footer {
   position: relative;
   padding-bottom: 6em; }
-
-.top-nav {
-  display: flex;
-  flex-direction: row;
-  padding-top: 3.4rem;
-  padding-bottom: 3.6rem;
-  padding-left: 4%;
-  padding-right: 4%; }
-  .top-nav .top-nav-logo {
-    display: flex;
-    width: 84px;
-    height: 84px;
-    border-radius: 50%;
-    background-color: transparent;
-    align-self: flex-start;
-    background-color: #222;
-    -webkit-mask: url("../images/FVC-Logomark.svg") no-repeat 50% 50%;
-    mask: url("../images/FVC-Logomark.svg") no-repeat 50% 50%;
-    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-    .top-nav .top-nav-logo:hover {
-      background-color: #5142FF;
-      transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
-  .top-nav .top-nav-links {
-    display: flex;
-    text-align: right;
-    align-self: flex-end;
-    margin-left: auto; }
-  .top-nav .top-nav-item {
-    list-style: none;
-    margin-left: 2em; }
-    .top-nav .top-nav-item a {
-      color: #333;
-      text-decoration: none;
-      font-weight: bold; }
-    .top-nav .top-nav-item a:hover {
-      color: #5142FF;
-      text-decoration: underline; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -394,21 +394,7 @@ img {
   border-radius: 100%;
   box-shadow: #FFF 0 0 0 5px;
 }
+
 .extra-pagination .pagination {
   width: auto;
-}
-
-.button {
-  display: block;
-  background-color: #FFCF24;
-  padding: .75em 3em;
-  color: #333;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-  margin-bottom: 1em;
-
-  &:hover {
-    color: #333;
-  }
 }
