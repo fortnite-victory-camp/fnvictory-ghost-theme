@@ -1235,6 +1235,7 @@ img {
   border-radius: 8px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
   font-size: 1.8rem;
+  text-align: center;
   transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
   .button:hover {
     transform: translateY(-2px);
@@ -1245,6 +1246,39 @@ img {
     background-color: white;
     color: #5142FF; }
 
+.profile-card {
+  position: relative;
+  width: 400px;
+  margin-right: 6rem;
+  transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  .profile-card:hover {
+    transform: scale(1.02);
+    transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  .profile-card .profile-image {
+    position: relative;
+    z-index: 2;
+    width: 132px;
+    height: 132px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4); }
+  .profile-card .profile-content {
+    position: absolute;
+    top: -2rem;
+    left: 6rem;
+    z-index: 1;
+    background-color: white;
+    padding: 2.4rem 3.6rem 2.4rem 9.4rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    max-width: 360px;
+    box-sizing: border-box; }
+  .profile-card .profile-name {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 0; }
+  .profile-card .profile-location {
+    font-size: 1.8rem;
+    color: #999;
+    margin-bottom: .5em; }
+
 /*  =======================
     Home page
 =========================== */
@@ -1252,8 +1286,7 @@ img {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 5;
-  margin: 0 4%;
+  margin: 0 4% 8.8rem;
   padding: 4.2rem;
   border-radius: 21px;
   background-color: #5142FF;
@@ -1297,15 +1330,32 @@ img {
       font-size: 1.7rem;
       padding: 1em 0; } }
 
+.home-section-title {
+  font-size: 3.2rem;
+  color: #8b8b8b;
+  margin-bottom: 4.4rem; }
+
+.guides {
+  display: flex;
+  margin: 0 4%; }
+
+.top-guides {
+  flex: 2;
+  max-width: 625px;
+  margin-left: 3.2rem;
+  margin-right: 12rem; }
+
 .post-preview {
   margin-bottom: 4em; }
 
-@media (max-width: 30em) {
-  .blog {
-    padding: 0 4%; } }
-
 .post-preview-title {
-  font-size: 3.6rem; }
+  font-size: 3.6rem;
+  font-family: "Burbank", "Nunito Sans", "Helvetica Neue", "helvetica", sans-serif;
+  text-transform: inherit;
+  margin-bottom: .25em;
+  margin-top: 0; }
+  .post-preview-title a {
+    display: block; }
 
 .post-preview-excerpt {
   margin-bottom: 1em;
@@ -1317,6 +1367,106 @@ img {
   .post-preview-date a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.3); }
+
+.latest-guides {
+  flex: 1;
+  max-width: 320px; }
+
+.latest-guide-item {
+  list-style: none;
+  margin-bottom: 1.5em;
+  line-height: 1.4; }
+  .latest-guide-item a {
+    display: block;
+    color: #333;
+    text-decoration: underline; }
+  .latest-guide-item a:hover {
+    color: #5142FF;
+    text-decoration: none; }
+
+.see-more-link {
+  display: block;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 1em 0; }
+
+.join-discord {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-top: 10rem;
+  padding-bottom: 6.4rem;
+  margin-bottom: 8.8rem;
+  background-color: #5142FF;
+  background: linear-gradient(110deg, #5142ff 0%, rgba(81, 66, 255, 0.5) 100%), url("../images/home-discord.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.discord-content {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto; }
+
+.discord-copy {
+  font-family: "Burbank", "Nunito Sans", "Helvetica Neue", "helvetica", sans-serif;
+  font-size: 6.4rem;
+  color: white;
+  max-width: 625px;
+  line-height: 1.2;
+  margin-bottom: .75em; }
+
+.join-discord .button {
+  max-width: 300px; }
+
+.victory-team {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1020px;
+  padding-bottom: 8.8rem; }
+
+.profiles {
+  display: flex;
+  flex-direction: row; }
+
+.home-footer {
+  background-color: #333333;
+  color: white;
+  padding: 5.4rem 0; }
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  padding: 0 4%; }
+
+.footer-half {
+  width: 50%; }
+
+.footer-title {
+  font-family: "Burbank", "Nunito Sans", "Helvetica Neue", "helvetica", sans-serif;
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 1em; }
+
+.footer-legal {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 350px;
+  line-height: 1.7; }
+
+.footer-nav {
+  display: flex;
+  flex-direction: row; }
+
+.footer-links {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0; }
+  .footer-links a {
+    display: block;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    padding: .3em 0; }
 
 /*  =======================
     Post page
@@ -1342,7 +1492,7 @@ img {
     color: white; }
 
 .post-template .post {
-  padding-top: 200px;
+  padding-top: 3.2rem;
   max-width: 700px;
   width: 100%; }
 
