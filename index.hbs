@@ -13,11 +13,11 @@
 <section class="guides">
   <div class="top-guides">
     <h2 class="home-section-title">Top Guides 🔥</h2>
-    {{#foreach posts limit="4"}}
-      {{#has tag="playbook"}}
+    {{#get "posts" filter="tags:playbook"}}
+      {{#foreach posts}}
         {{> "post-preview"}}
-      {{/has}}
-    {{/foreach}}
+      {{/foreach}}
+    {{/get}}
     <p class="hide-mobile">
       <a href="/guides" class="see-more-link">See more &rarr;</a>
     </p>
