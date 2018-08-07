@@ -1171,11 +1171,15 @@ img {
   max-width: 540px; }
   @media (max-width: 30em) {
     .content {
-      padding-top: 4rem; } }
+      padding: 4rem 4%; } }
   .content ul, .content ol {
     box-sizing: border-box; }
     .content ul li, .content ol li {
       margin-bottom: 1em; }
+
+@media (max-width: 30em) {
+  .hide-mobile {
+    display: none; } }
 
 .top-nav {
   display: flex;
@@ -1251,6 +1255,13 @@ img {
   width: 400px;
   margin-right: 6rem;
   transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
+  @media (max-width: 30em) {
+    .profile-card {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 4.4rem;
+      display: flex;
+      flex-direction: row; } }
   .profile-card:hover {
     transform: scale(1.02);
     transition: all 0.32s cubic-bezier(0.62, 0.28, 0.23, 0.99); }
@@ -1270,6 +1281,13 @@ img {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     max-width: 360px;
     box-sizing: border-box; }
+    @media (max-width: 30em) {
+      .profile-card .profile-content {
+        position: relative;
+        left: -1rem;
+        top: 1.2rem;
+        width: 100%;
+        padding: 2.4rem; } }
   .profile-card .profile-name {
     font-size: 2.8rem;
     color: #333;
@@ -1338,12 +1356,19 @@ img {
 .guides {
   display: flex;
   margin: 0 4%; }
+  @media (max-width: 30em) {
+    .guides {
+      flex-direction: column; } }
 
 .top-guides {
   flex: 2;
   max-width: 625px;
   margin-left: 3.2rem;
   margin-right: 12rem; }
+  @media (max-width: 30em) {
+    .top-guides {
+      flex: 0;
+      margin: 0; } }
 
 .post-preview {
   margin-bottom: 4em; }
@@ -1371,6 +1396,12 @@ img {
 .latest-guides {
   flex: 1;
   max-width: 320px; }
+  @media (max-width: 30em) {
+    .latest-guides {
+      flex: 0;
+      margin: 0;
+      max-width: 100%;
+      padding: 0; } }
 
 .latest-guide-item {
   list-style: none;
@@ -1401,12 +1432,17 @@ img {
   background-color: #5142FF;
   background: linear-gradient(110deg, #5142ff 0%, rgba(81, 66, 255, 0.5) 100%), url("../images/home-discord.jpg");
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  box-sizing: border-box; }
 
 .discord-content {
   width: 100%;
   max-width: 1020px;
   margin: 0 auto; }
+  @media (max-width: 30em) {
+    .discord-content {
+      padding: 0 4%;
+      max-width: 80%; } }
 
 .discord-copy {
   font-family: "Burbank", "Nunito Sans", "Helvetica Neue", "helvetica", sans-serif;
@@ -1415,19 +1451,36 @@ img {
   max-width: 625px;
   line-height: 1.2;
   margin-bottom: .75em; }
+  @media (max-width: 30em) {
+    .discord-copy {
+      font-size: 4.2rem;
+      line-height: 1.4; } }
 
-.join-discord .button {
+.join-discord .button.button-white {
   max-width: 300px; }
+  @media (max-width: 30em) {
+    .join-discord .button.button-white {
+      display: block;
+      max-width: 80%;
+      padding-left: 0;
+      padding-right: 0; } }
 
 .victory-team {
   margin: 0 auto;
   width: 100%;
   max-width: 1020px;
-  padding-bottom: 8.8rem; }
+  padding-bottom: 8.8rem;
+  box-sizing: border-box; }
+  @media (max-width: 30em) {
+    .victory-team {
+      padding: 0 4%; } }
 
 .profiles {
   display: flex;
   flex-direction: row; }
+  @media (max-width: 30em) {
+    .profiles {
+      display: block; } }
 
 .home-footer {
   background-color: #333333;
@@ -1438,9 +1491,16 @@ img {
   display: flex;
   flex-direction: row;
   padding: 0 4%; }
+  @media (max-width: 30em) {
+    .footer-content {
+      display: block;
+      text-align: center; } }
 
 .footer-half {
   width: 50%; }
+  @media (max-width: 30em) {
+    .footer-half {
+      width: 100%; } }
 
 .footer-title {
   font-family: "Burbank", "Nunito Sans", "Helvetica Neue", "helvetica", sans-serif;
@@ -1453,10 +1513,16 @@ img {
   color: rgba(255, 255, 255, 0.7);
   max-width: 350px;
   line-height: 1.7; }
+  @media (max-width: 30em) {
+    .footer-legal {
+      margin-bottom: 4.4rem; } }
 
 .footer-nav {
   display: flex;
   flex-direction: row; }
+  @media (max-width: 30em) {
+    .footer-nav {
+      display: block; } }
 
 .footer-links {
   list-style: none;

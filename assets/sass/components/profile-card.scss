@@ -4,6 +4,14 @@
   margin-right: 6rem;
   @include transition;
 
+  @include mq-personal {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 4.4rem;
+    display: flex;
+    flex-direction: row;
+  }
+
   &:hover {
     transform: scale(1.02);
     @include transition;
@@ -27,6 +35,14 @@
     box-shadow: 0 1px 3px rgba(0,0,0,.2);
     max-width: 360px;
     box-sizing: border-box;
+
+    @include mq-personal {
+      position: relative;
+      left: -1rem;
+      top: 1.2rem;
+      width: 100%;
+      padding: 2.4rem;
+    }
   }
 
   .profile-name {

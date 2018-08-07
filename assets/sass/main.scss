@@ -24,11 +24,15 @@
   max-width:540px;
 
   @include mq-personal {
-    padding-top: 4rem;
+    padding: 4rem 4%;
   }
 
   ul, ol {
     box-sizing:border-box;
     li { margin-bottom: 1em;}
   }
+}
+
+.hide-mobile {
+  @include mq-personal { display: none; }
 }
