@@ -14,7 +14,9 @@
   <div class="top-guides">
     <h2 class="home-section-title">Top Guides 🔥</h2>
     {{#foreach posts limit="4"}}
+      {{#has tag="playbook"}}
         {{> "post-preview"}}
+      {{/has}}
     {{/foreach}}
     <p class="hide-mobile">
       <a href="/guides" class="see-more-link">See more &rarr;</a>
